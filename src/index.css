@@ -1,68 +1,91 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --cream: #F6F1E6;
+  --ink: #2E49B8;
+  --grid: rgba(46, 73, 184, 0.06);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.mapShell{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: var(--cream);
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.mapLayer{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Optional: keep the map a bit “printed” */
+.mapShell .maplibregl-canvas{
+  filter: saturate(0.85) contrast(1.08) brightness(1.03);
+}
+
+/* Cream wash */
+.mapTint{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: rgba(246, 241, 230, 0.14);
+  mix-blend-mode: multiply;
+}
+
+/* Grid overlay */
+.blueprintGrid{
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mix-blend-mode: multiply;
+}
+
+/* Subtle paper noise */
+.paperNoise{
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+}
+
+/* Status */
+.statusBadge{
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 99999;
+  padding: 8px 10px;
+  border: 1px solid var(--ink);
+  background: rgba(255,255,255,0.85);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  max-width: 420px;
+}
+
+/* Reset button */
+.resetBtn{
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 99999;
+  padding: 10px 12px;
+  border: 1px solid rgba(46,73,184,0.35);
+  background: rgba(246,241,230,0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.resetBtn:hover{
+  background: rgba(246,241,230,0.98);
 }
