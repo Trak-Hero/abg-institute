@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const palette = {
   navy: "#092131",
-  orange: "#e87108",
+  orange: "#e87108", 
   cream: "#f8e1cf",
   white: "#ffffff",
 };
@@ -767,7 +767,7 @@ export default function Home() {
               <div className="hero-side">
                 <div className="signal-card reveal-block">
                   <div className="signal-head">
-                    <span>Live atmospheric preview</span>
+                    <span>RASTER + VECTOR + AUDIO</span>
                     <span className="signal-tag">audio pulse</span>
                   </div>
 
