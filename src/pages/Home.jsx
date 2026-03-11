@@ -768,7 +768,7 @@ export default function Home() {
                 <div className="signal-card reveal-block">
                   <div className="signal-head">
                     <span>RASTER + VECTOR + AUDIO</span>
-                    <span className="signal-tag">audio pulse</span>
+                    <span className="signal-tag">3rd Ontology</span>
                   </div>
 
                   <div className="ambient-graph">
