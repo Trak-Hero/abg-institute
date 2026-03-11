@@ -83,30 +83,30 @@ const AUDIO_POINTS = [
 
   {
     id: 2,
-    title: "FOCO Lunch Rush",
+    title: "FOCO",
     lng: -72.2922352196727,
     lat: 43.703070474079745,
     startMin: 660,
     endMin: 780,
     imageUrl: "img/foco2.png",
-    audioUrl: "/audio/foco-lunch.mp3",
-    tags: ["dining", "crowd", "midday"],
+    audioUrl: "/audio/FOCO.m4a",
+    tags: ["dining", "food", "downtime"],
     locationTag: "foco",
-    description: "Dense conversational sound, trays, doors, and movement around lunch time at FOCO.",
+    description: "FOCO atmosphere during downtime.",
   },
 
   {
     id: 3,
-    title: "Frat Row Night Atmosphere",
+    title: "Frat Row",
     lng: -72.29118708775829,
     lat: 43.706278739935556,
-    startMin: 1320,
-    endMin: 0,
-    imageUrl: "frat-row.jpg",
-    audioUrl: "/audio/frat-row-night.mp3",
-    tags: ["night", "social", "street"],
+    startMin: 660,
+    endMin: 780,
+    imageUrl: "/img/Frat.png",
+    audioUrl: "/audio/frat.m4a",
+    tags: ["frat row", "quiet", "atmosphere"],
     locationTag: "frat_row",
-    description: "Late-night atmosphere with voices, passing footsteps, and distant music.",
+    description: "The frat row during down time.",
   },
 
   {
@@ -234,6 +234,19 @@ const AUDIO_POINTS = [
     locationTag: "alumni_gymnasium",
     description: "The basketball at the gym.",
   },
+  {
+    id: 17,
+    title: "Intersection",
+    lng: -72.2927870877582,
+    lat: 43.70507873993556,
+    startMin: 660,
+    endMin: 780,
+    imageUrl: "northmain.png",
+    audioUrl: "audio/Intersection.m4a",
+    tags: ["outdoors", "intersection", "social"],
+    locationTag: "intersection",
+    description: "The intersection between library and Tuck drive.",
+  },
 ];
 
 const darkMatterStyle = {
@@ -294,7 +307,6 @@ function formatMinutes(totalMinutes) {
 }
 
 function isNightRange(startMin, endMin) {
-  // decide theme from midpoint of selected window
   let midpoint;
   if (startMin <= endMin) {
     midpoint = Math.floor((startMin + endMin) / 2);
@@ -303,7 +315,6 @@ function isNightRange(startMin, endMin) {
     midpoint = Math.floor((startMin + wrappedEnd) / 2) % 1440;
   }
 
-  // night = before 6 AM or after 6 PM
   return midpoint < 360 || midpoint >= 1080;
 }
 
@@ -485,7 +496,6 @@ export default function MapPage() {
       const playBtn = popupNode.querySelector(".popup-play-btn");
       if (!playBtn) return;
 
-      // Reuse one audio object per point
       if (!audioRefs.current[point.id]) {
         const audio = new Audio(point.audioUrl);
 
@@ -511,10 +521,8 @@ export default function MapPage() {
       const audio = audioRefs.current[point.id];
       playButtonRefs.current[point.id] = playBtn;
 
-      // Sync button label with current audio state
       playBtn.textContent = audio.paused ? "▶ Play sound" : "❚❚ Pause sound";
 
-      // Avoid stacking listeners by assigning onclick directly
       playBtn.onclick = async () => {
         try {
           if (audio.paused) {
