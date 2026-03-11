@@ -1,9 +1,8 @@
 # PROJECT SOMEWHERE STREET
 
 <img width="1512" height="859" alt="Screenshot 2026-03-10 at 9 28 13 PM" src="https://github.com/user-attachments/assets/1b479369-8daa-47a2-9685-d6d51f03afe2" />
-<img width="1507" height="857" alt="Screenshot 2026-03-10 at 9 21 56 PM" src="https://github.com/user-attachments/assets/5a39eacd-4149-45ee-b6b4-dab2ece09a7f" />
-<img width="1512" height="856" alt="Screenshot 2026-03-10 at 9 22 09 PM" src="https://github.com/user-attachments/assets/e09c890b-b7fc-4385-87ef-eccbb9cec8c7" />
-
+<img width="1512" height="858" alt="Screenshot 2026-03-10 at 9 28 40 PM" src="https://github.com/user-attachments/assets/6df8e4db-5b51-4a5c-a6b9-0e3bfbdeb0f6" />
+<img width="1512" height="856" alt="Screenshot 2026-03-10 at 9 28 57 PM" src="https://github.com/user-attachments/assets/cf7fce98-9fc2-410f-975a-89c89689627f" />
 
 ## About the project
 
