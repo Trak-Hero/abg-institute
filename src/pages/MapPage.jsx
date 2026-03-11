@@ -1051,7 +1051,7 @@ useEffect(() => {
               <div className="eyebrow">Project Somewhere Street, 03755</div>
               <h1 className="title">Audio-Based Geonavigation Map</h1>
               <div className="subtitle">
-                Try playing multiple audios concurrently to create your own soundscape of Dartmouth!
+                Dev Tip #1: Try playing multiple audios concurrently to create your own soundscape of Dartmouth!
                 <br />
                 The map is best experienced with headphones.
               </div>
@@ -1108,8 +1108,8 @@ useEffect(() => {
         </Link>
 
         <div className={`glassCard mapHint`}>
-          Audio points are filtered by whether their recording time overlaps the selected
-          time window. The basemap automatically shifts between day and night modes.
+          Dev Tip #2: You can filter audio points by recording time overlaps within the selected
+          time window. Basemap shifts between day and night modes.
         </div>
       </div>
     </>
