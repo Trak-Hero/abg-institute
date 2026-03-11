@@ -1,3 +1,5 @@
+// Author: Trak & Bowen
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
@@ -736,13 +738,13 @@ export default function Home() {
 
             <div className="hero-grid">
               <div className="hero-copy">
-                <div className="hero-kicker">Audio field / place intelligence / 03755</div>
+                <div className="hero-kicker">Trak P./ Bowen H./ Nigel J.</div>
                 <h1 className="hero-title">
                   Project Somewhere Street,
                   <span className="hero-title-accent">03755</span>
                 </h1>
                 <p className="hero-subtitle">
-                  An Audio-Based Geonavigation Project
+                  An Audio-Based Geonavigation Project of Dartmouth College
                 </p>
                 <p className="hero-subtitle" style={{ maxWidth: 700 }}>
                   A spatial interface for listening to Dartmouth through time, atmosphere,
@@ -862,7 +864,7 @@ export default function Home() {
               <div className="feature-card reveal-block">
                 <h4>Reflections</h4>
                 <p>
-                  We each found the “social dimension” of mapping these six locations to be an interesting experience. As mentioned above, we were aware of our own positionality when recording audio samples; how we collected data was directly influenced by our experiences at these locations. (For example, we would often ask ourselves, “How do we best record this location so that it really sounds like that location? What are the specific sound markers that could help the listener identify this location?”) Of course, these questions circulate around our own definition of these locations, which is influenced by our social awareness of experiences of it. So, being able to share these personal influences through an online website has been an interesting exercise for us in a shared, collective experience of a location through sound.
+                  We each found the “social dimension” of mapping these six locations to be an interesting experience. As mentioned above, we were aware of our own positionality when recording audio samples; how we collected data was directly influenced by our experiences at these locations. (For example, we would often ask ourselves, “How do we best record this location so that it really sounds like that location? What are the specific sound markers that could help the listener identify this location?”) Of course, these questions circulate around our own definition of these locations, which is influenced by our social awareness of experiences of it. So, being able to share these personal influences through an online website has been an interesting exercise for us in a shared, collective experience of a location through sound. We also found that through using our map interface, we can overlay multiple audios at the same time and experience the immersive surround audio of the place. By mixing and matching different audio strings to play concurrently, we build a soundscape unique to that location. Another thing is the contrast of sound in many places. We chose to record audio at certain places during an unexpected time to remove stereotypes and expectations one may have of the place. For example, we recorded Frat Row during the day, which was serene and quiet. The temporal condition we added also played a big role. Being able to play different audio of the same place layered by time (by having the entire timescale present), gives us a high dynamic range audio representation of the place through different times of the day in one cohesive audio.
                 </p>
               </div>
 
@@ -885,6 +887,13 @@ export default function Home() {
                 <p>{card.body}</p>
               </article>
             ))}
+          </div>
+
+          <div className="feature-card reveal-block" style={{ marginTop: 32 }}>
+            <h4>Limitations and Acknowledgement</h4>
+            <p style={{ minHeight: 120 }}>
+              We found it really surprisingly difficult to combine raster and vector. Because of the nature of our OpenStreetMap API map, zooming in and out loses the vectorized coordinates which are based on latitude and longitude. This made it difficult to have the audio markers (which are vectorized) stay in the same place as users zoom in and out of the map. We tried a lot of different methods to solve this problem, but we were ultimately found that the solution within our timeline would be to limit the zoom. We also acknowledge that Open Public Data of audio samples may be a violation of privacy so we chose to limit it to our controlled audio samples of which we can receive consent.
+            </p>
           </div>
 
           <div className="footer-band reveal-block">

@@ -1,3 +1,5 @@
+// Author: Trak & Bowen
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import maplibregl from "maplibre-gl";
@@ -383,7 +385,7 @@ export default function MapPage() {
     });
 
     map.on("load", () => {
-      setStatus("Map loaded ✅");
+      setStatus("Map loaded");
     });
 
     map.on("error", (e) => {
