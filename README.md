@@ -1,5 +1,10 @@
 # PROJECT SOMEWHERE STREET
 
+<img width="1510" height="859" alt="Screenshot 2026-03-10 at 9 21 35 PM" src="https://github.com/user-attachments/assets/7ab6778b-1204-4972-aeba-39102e1e1e86" />
+<img width="1507" height="857" alt="Screenshot 2026-03-10 at 9 21 56 PM" src="https://github.com/user-attachments/assets/5a39eacd-4149-45ee-b6b4-dab2ece09a7f" />
+<img width="1512" height="856" alt="Screenshot 2026-03-10 at 9 22 09 PM" src="https://github.com/user-attachments/assets/e09c890b-b7fc-4385-87ef-eccbb9cec8c7" />
+
+
 ## About the project
 
 This website and project starts with a simple, unassuming question:
